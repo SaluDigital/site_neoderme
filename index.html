@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neoderme | Dermatologia Clínica, Estética e Laser</title>
+  <meta name="description" content="Clínica dermatológica de alto padrão com foco em diagnóstico preciso, tecnologia avançada e tratamentos personalizados para saúde, beleza e bem-estar da pele." />
+  <meta property="og:title" content="Neoderme | Dermatologia Clínica, Estética e Laser" />
+  <meta property="og:description" content="Clínica dermatológica de alto padrão com foco em diagnóstico preciso, tecnologia avançada e tratamentos personalizados para saúde, beleza e bem-estar da pele." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neoderme.com.br" />
+  <meta property="og:image" content="uploads/logo.png" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%236A908D' width='32' height='32' rx='6'/><text x='50%' y='54%' font-size='18' text-anchor='middle' dominant-baseline='middle' fill='white' font-family='serif'>N</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Philosopher:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ HEADER ════════════════════════════════ -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+
+      <a href="#inicio" class="header__logo" aria-label="Neoderme – Voltar ao início">
+        <img src="assets/logo.png" alt="Neoderme" width="150" height="64" />
+      </a>
+
+      <nav class="header__nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#inicio"      class="nav__link">Início</a></li>
+          <li><a href="#a-clinica"   class="nav__link">A Clínica</a></li>
+          <li><a href="#tratamentos" class="nav__link">Tratamentos</a></li>
+          <li><a href="#estrutura"   class="nav__link">Estrutura</a></li>
+          <li><a href="#equipe"      class="nav__link">Equipe</a></li>
+          <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li><a href="#contato"     class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://wa.me/5541992684777" class="btn btn--header" target="_blank" rel="noopener noreferrer">
+          Agendar consulta
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menu mobile">
+      <ul class="mobile-nav__list">
+        <li><a href="#inicio"      class="mobile-nav__link">Início</a></li>
+        <li><a href="#a-clinica"   class="mobile-nav__link">A Clínica</a></li>
+        <li><a href="#tratamentos" class="mobile-nav__link">Tratamentos</a></li>
+        <li><a href="#estrutura"   class="mobile-nav__link">Estrutura</a></li>
+        <li><a href="#equipe"      class="mobile-nav__link">Equipe</a></li>
+        <li><a href="#depoimentos" class="mobile-nav__link">Depoimentos</a></li>
+        <li><a href="#contato"     class="mobile-nav__link">Contato</a></li>
+      </ul>
+      <div class="mobile-menu__footer">
+        <div class="mobile-menu__social" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/neoderme/" class="mobile-menu__social-link" aria-label="Instagram da Neoderme" target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/neoderme/" class="mobile-menu__social-link" aria-label="Facebook da Neoderme" target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+        <a href="https://wa.me/5541992684777" class="btn btn--header" target="_blank" rel="noopener noreferrer">Agendar consulta</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+
+    <!-- ═══════════════════════════════ HERO ══════════════════════════════════ -->
+    <section id="inicio" class="hero" aria-label="Banner principal">
+
+      <div class="hero__track" id="heroTrack">
+
+        <!-- Slide 1 -->
+        <div class="hero__slide hero__slide--1 is-active" data-slide="0" data-screen-label="Hero Slide 1">
+          <div class="hero__bg"></div>
+          <div class="hero__overlay"></div>
+          <div class="hero__inner container">
+            <div class="hero__content">
+              <span class="hero__eyebrow">Dermatologia &amp; Cuidado</span>
+              <h1 class="hero__title">Dermatologia com precisão e sensibilidade</h1>
+              <p class="hero__lead">Na Neoderme, cada tratamento começa com um diagnóstico cuidadoso e termina com resultados naturais, elegantes e seguros. Unimos ciência, tecnologia e experiência médica para cuidar da sua pele com excelência.</p>
+              <div class="hero__btns">
+                <a href="#a-clinica" class="btn btn--hero">Conheça a clínica</a>
+              </div>
+            </div>
+            <div class="hero__aside">
+              <div class="hero__badge" aria-label="10 anos de cuidado com a pele">
+                <span class="hero__badge-num">10</span>
+                <div class="hero__badge-div"></div>
+                <span class="hero__badge-label">anos de cuidado<br/>com a pele</span>
+              </div>
+              <div class="hero__rings" aria-hidden="true">
+                <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="210" cy="210" r="205" stroke="rgba(217,190,165,0.18)" stroke-width="1"/>
+                  <circle cx="210" cy="210" r="165" stroke="rgba(217,190,165,0.12)" stroke-width="1"/>
+                  <circle cx="210" cy="210" r="120" stroke="rgba(217,190,165,0.08)" stroke-width="1"/>
+                  <circle cx="210" cy="210" r="72"  stroke="rgba(217,190,165,0.06)" stroke-width="1"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero__slide hero__slide--2" data-slide="1" data-screen-label="Hero Slide 2">
+          <div class="hero__bg"></div>
+          <div class="hero__overlay"></div>
+          <div class="hero__inner container">
+            <div class="hero__content">
+              <span class="hero__eyebrow">Ciência &amp; Tecnologia</span>
+              <h2 class="hero__title">Beleza natural,<br/>ciência avançada</h2>
+              <p class="hero__lead">A Neoderme une dermatologia clínica e estética com abordagem médica criteriosa, equipamentos de última geração e uma equipe dedicada a proporcionar resultados naturais e duradouros.</p>
+              <div class="hero__btns">
+                <a href="#tratamentos" class="btn btn--hero">Conheça nossos tratamentos</a>
+              </div>
+            </div>
+            <div class="hero__aside">
+              <div class="hero__rings" aria-hidden="true">
+                <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="210" cy="210" r="205" stroke="rgba(217,190,165,0.22)" stroke-width="1"/>
+                  <circle cx="210" cy="210" r="165" stroke="rgba(217,190,165,0.15)" stroke-width="1"/>
+                  <circle cx="210" cy="210" r="120" stroke="rgba(217,190,165,0.1)" stroke-width="1"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero__slide hero__slide--3" data-slide="2" data-screen-label="Hero Slide 3">
+          <div class="hero__bg"></div>
+          <div class="hero__overlay"></div>
+          <div class="hero__inner container">
+            <div class="hero__content">
+              <span class="hero__eyebrow">Uma Década de Excelência</span>
+              <h2 class="hero__title">10 anos de Neoderme</h2>
+              <p class="hero__lead">Uma década dedicada ao cuidado com a pele, à confiança de nossos pacientes e à evolução constante da dermatologia. Experiência, credibilidade e compromisso com a excelência.</p>
+              <div class="hero__btns">
+                <a href="#a-clinica" class="btn btn--hero">Conheça nossa história</a>
+              </div>
+            </div>
+            <div class="hero__aside">
+              <div class="hero__decade" aria-hidden="true">
+                <span class="hero__decade-num">10</span>
+              </div>
+              <div class="hero__rings" aria-hidden="true">
+                <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="210" cy="210" r="205" stroke="rgba(217,190,165,0.15)" stroke-width="1"/>
+                  <circle cx="210" cy="210" r="155" stroke="rgba(217,190,165,0.1)" stroke-width="1"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="hero__slide hero__slide--4" data-slide="3" data-screen-label="Hero Slide 4">
+          <div class="hero__bg"></div>
+          <div class="hero__overlay"></div>
+          <div class="hero__inner container">
+            <div class="hero__content">
+              <span class="hero__eyebrow">Ciência &amp; Tecnologia</span>
+              <h2 class="hero__title">Beleza natural, ciência avançada.</h2>
+              <p class="hero__lead">A Neoderme une dermatologia clínica e estética com abordagem médica criteriosa, equipamentos de última geração e uma equipe dedicada a proporcionar resultados naturais e duradouros.</p>
+              <div class="hero__btns">
+                <a href="#tratamentos" class="btn btn--hero">Conheça nossos tratamentos</a>
+              </div>
+            </div>
+            <div class="hero__aside"></div>
+          </div>
+        </div>
+
+      </div><!-- /hero__track -->
+
+      <!-- Hero Controls -->
+      <div class="hero__controls" aria-label="Controles do slide">
+        <button class="hero__dot is-active" data-target="0" aria-label="Slide 1"></button>
+        <button class="hero__dot"           data-target="1" aria-label="Slide 2"></button>
+        <button class="hero__dot"           data-target="2" aria-label="Slide 3"></button>
+        <button class="hero__dot"           data-target="3" aria-label="Slide 4"></button>
+      </div>
+
+      <div class="hero__counter" aria-live="polite" aria-atomic="true">
+        <span class="hero__counter-cur">01</span>
+        <span class="hero__counter-bar"></span>
+        <span class="hero__counter-tot">04</span>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ═════════════════════════════ SOBRE ════════════════════════════════ -->
+    <section id="a-clinica" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about__grid">
+
+          <!-- Coluna imagem -->
+          <div class="about__img-col" data-animate="fade-right">
+            <div class="about__img-wrap">
+              <!--
+                SUBSTITUIR: Inserir imagem real da clínica aqui.
+                <img src="imagens/clinica-interior.jpg" alt="Interior da Clínica Neoderme" loading="lazy" />
+              -->
+              <img src="assets/sobre.webp" alt="Interior da Clínica Neoderme" loading="lazy" />
+              <div class="about__img-card">
+                <p class="about__img-card-text">"Cuidado individualizado, ética médica e resultados naturais."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna texto -->
+          <div class="about__text-col" data-animate="fade-left">
+            <span class="eyebrow">A Clínica</span>
+            <h2 class="section-title" id="about-title">Dermatologia com precisão, experiência e propósito</h2>
+            <div class="about__body">
+              <p>A Neoderme nasceu com um objetivo claro: oferecer dermatologia de alto nível, baseada em diagnóstico preciso, tecnologia avançada e atenção individualizada.</p>
+              <p>Ao longo dos anos, a clínica se consolidou como referência em dermatologia clínica, cirúrgica e estética, sempre com um compromisso inegociável com a segurança, a ética médica e a naturalidade dos resultados.</p>
+              <p>Cada paciente é único — e, por isso, cada plano de tratamento é cuidadosamente personalizado, respeitando características, expectativas e momento de vida.</p>
+              <p>Mais do que tratar a pele, buscamos promover saúde, confiança e bem-estar de forma consistente e responsável.</p>
+            </div>
+            <a href="#contato" class="btn btn--outline">Saiba mais</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════ TRATAMENTOS ════════════════════════════ -->
+    <section id="tratamentos" class="section treatments" aria-labelledby="treatments-title">
+      <div class="container">
+
+        <header class="section-header" data-animate="fade-up">
+          <span class="eyebrow">Especialidades</span>
+          <h2 class="section-title" id="treatments-title">Tratamentos dermatológicos</h2>
+          <p class="section-lead">A Neoderme oferece tratamentos dermatológicos completos, combinando conhecimento médico aprofundado com tecnologias de última geração para proporcionar resultados seguros, eficazes e naturais.</p>
+        </header>
+
+        <div class="treatments__list">
+
+          <article class="t-card" data-animate="fade-up" data-delay="0">
+            <div class="t-card__num" aria-hidden="true">01</div>
+            <div class="t-card__body">
+              <h3 class="t-card__title">Dermatologia Clínica</h3>
+              <p class="t-card__text">Diagnóstico e tratamento das principais doenças da pele, cabelos e unhas, com acompanhamento médico especializado e abordagem individualizada.</p>
+            </div>
+            <div class="t-card__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </article>
+
+          <article class="t-card" data-animate="fade-up" data-delay="1">
+            <div class="t-card__num" aria-hidden="true">02</div>
+            <div class="t-card__body">
+              <h3 class="t-card__title">Cirurgia Dermatológica</h3>
+              <p class="t-card__text">Procedimentos cirúrgicos para remoção de lesões cutâneas, realizados com rigor técnico, segurança e atenção aos resultados funcionais e estéticos.</p>
+            </div>
+            <div class="t-card__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </article>
+
+          <article class="t-card" data-animate="fade-up" data-delay="2">
+            <div class="t-card__num" aria-hidden="true">03</div>
+            <div class="t-card__body">
+              <h3 class="t-card__title">Dermatologia Estética</h3>
+              <p class="t-card__text">Procedimentos voltados para rejuvenescimento, melhora da qualidade da pele, prevenção do envelhecimento e valorização da beleza natural.</p>
+            </div>
+            <div class="t-card__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </article>
+
+          <article class="t-card" data-animate="fade-up" data-delay="3">
+            <div class="t-card__num" aria-hidden="true">04</div>
+            <div class="t-card__body">
+              <h3 class="t-card__title">Tecnologias a Laser</h3>
+              <p class="t-card__text">Equipamentos modernos que permitem tratar diferentes condições da pele com precisão e segurança, sempre com indicação médica adequada.</p>
+            </div>
+            <div class="t-card__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </article>
+
+          <article class="t-card" data-animate="fade-up" data-delay="4">
+            <div class="t-card__num" aria-hidden="true">05</div>
+            <div class="t-card__body">
+              <h3 class="t-card__title">Depilação a Laser</h3>
+              <p class="t-card__text">Tecnologia avançada para redução duradoura dos pelos, proporcionando conforto, praticidade e melhora da qualidade da pele.</p>
+            </div>
+            <div class="t-card__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="treatments__cta" data-animate="fade-up">
+          <a href="#contato" class="btn btn--outline">Ver todos os tratamentos</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═════════════════════════════ DIFERENCIAIS ═════════════════════════ -->
+    <section class="section differentials" aria-labelledby="diff-title">
+      <div class="diff__ornament" aria-hidden="true"></div>
+      <div class="container">
+
+        <div class="diff__header" data-animate="fade-up">
+          <span class="eyebrow">Nossos Diferenciais</span>
+          <h2 class="section-title" id="diff-title">Por que escolher a Neoderme</h2>
+          <p class="diff__quote">"Excelência técnica, cuidado individualizado e naturalidade em cada detalhe."</p>
+        </div>
+
+        <div class="diff__grid">
+
+          <div class="diff-item" data-animate="fade-up" data-delay="0">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            </div>
+            <h3 class="diff-item__title">Diagnóstico preciso</h3>
+            <p class="diff-item__text">Avaliação médica criteriosa que orienta cada decisão terapêutica.</p>
+          </div>
+
+          <div class="diff-item" data-animate="fade-up" data-delay="1">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="diff-item__title">Indicação responsável</h3>
+            <p class="diff-item__text">Cada paciente recebe um plano de tratamento individualizado, respeitando características e necessidades específicas.</p>
+          </div>
+
+          <div class="diff-item" data-animate="fade-up" data-delay="2">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="diff-item__title">Tecnologia de ponta</h3>
+            <p class="diff-item__text">Equipamentos modernos que permitem tratamentos mais precisos, eficazes e seguros.</p>
+          </div>
+
+          <div class="diff-item" data-animate="fade-up" data-delay="3">
+            <div class="diff-item__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="diff-item__title">Resultados naturais</h3>
+            <p class="diff-item__text">Foco em tratamentos que valorizam a beleza individual, com resultados equilibrados e harmônicos.</p>
+          </div>
+
+        </div>
+
+        <div class="diff__cta">
+          <a href="https://wa.me/5541992684777" class="diff__wa" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Neoderme no WhatsApp">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════ ESTRUTURA ═══════════════════════════ -->
+    <section id="estrutura" class="section structure" aria-labelledby="structure-title">
+      <div class="container">
+
+        <header class="section-header" data-animate="fade-up">
+          <span class="eyebrow">Estrutura</span>
+          <h2 class="section-title" id="structure-title">Infraestrutura moderna e funcional</h2>
+          <p class="section-lead">A Neoderme dispõe de uma estrutura moderna, com tecnologia atualizada e ambientes organizados para garantir segurança, privacidade e qualidade no atendimento dermatológico.</p>
+        </header>
+
+        <!--
+          SUBSTITUIR: Inserir fotos reais da clínica aqui.
+          Exemplo: <img src="imagens/recepcao.jpg" alt="Recepção da Clínica Neoderme" loading="lazy" />
+        -->
+        <!-- SUBSTITUIR: gallery__img--ph1 a ph4 por imagens reais da clínica -->
+        <div class="gallery" data-animate="fade-up">
+          <div class="gallery__main">
+            <img src="assets/neoderme1.webp" alt="Ambientes planejados da Clínica Neoderme" class="gallery__img" loading="lazy" />
+            <div class="gallery__caption">Ambientes planejados</div>
+          </div>
+          <div class="gallery__sm">
+            <img src="assets/neoderme2.webp" alt="Tecnologia atualizada da Clínica Neoderme" class="gallery__img" loading="lazy" />
+            <div class="gallery__caption">Tecnologia atualizada</div>
+          </div>
+          <div class="gallery__sm">
+            <img src="assets/neoderme3.webp" alt="Privacidade no atendimento da Clínica Neoderme" class="gallery__img" loading="lazy" />
+            <div class="gallery__caption">Privacidade no atendimento</div>
+          </div>
+          <div class="gallery__sm">
+            <img src="assets/neoderme4.webp" alt="Conforto e segurança da Clínica Neoderme" class="gallery__img" loading="lazy" />
+            <div class="gallery__caption">Conforto e segurança</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════ EQUIPE ══════════════════════════════ -->
+    <section id="equipe" class="section team" aria-labelledby="team-title">
+      <div class="container">
+
+        <header class="section-header" data-animate="fade-up">
+          <span class="eyebrow">Equipe</span>
+          <h2 class="section-title" id="team-title">Nossa equipe médica</h2>
+          <p class="section-lead">A Neoderme conta com uma equipe médica qualificada, com sólida formação e constante atualização científica. Cada profissional atua com rigor técnico, ética e compromisso com resultados seguros e naturais.</p>
+        </header>
+
+        <!--
+          SUBSTITUIR: Inserir fotos reais dos profissionais aqui.
+          Exemplo: <img src="imagens/dra-gessica.jpg" alt="Dra. Géssica de Mattos Diosti Klockner" loading="lazy" />
+        -->
+        <div class="team__grid">
+
+          <article class="team-card" data-animate="fade-up" data-delay="0">
+            <div class="team-card__photo">
+              <img src="assets/dra6.webp" alt="Dra. Géssica de Mattos Diosti Klockner" loading="lazy" />
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Dra. Géssica de Mattos Diosti Klockner</h3>
+              <p class="team-card__role">Médica Dermatologista</p>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate="fade-up" data-delay="1">
+            <div class="team-card__photo">
+              <img src="assets/dra2.webp" alt="Dra. Gisele Shimizu" loading="lazy" />
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Dra. Gisele Shimizu</h3>
+              <p class="team-card__role">Médica Dermatologista</p>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate="fade-up" data-delay="2">
+            <div class="team-card__photo">
+              <img src="assets/dra3.webp" alt="Dra. Giseli de Mattos Diosti Stein" loading="lazy" />
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Dra. Giseli de Mattos Diosti Stein</h3>
+              <p class="team-card__role">Médica Dermatologista</p>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate="fade-up" data-delay="3">
+            <div class="team-card__photo">
+              <img src="assets/dra4.webp" alt="Dra. Michele Totti" loading="lazy" />
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Dra. Michele Totti</h3>
+              <p class="team-card__role">Médica Dermatologista</p>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate="fade-up" data-delay="4">
+            <div class="team-card__photo">
+              <img src="assets/dra5.webp" alt="Dra. Camila Klauz" loading="lazy" />
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Dra. Camila Klauz</h3>
+              <p class="team-card__role">Fisioterapeuta Dermatofuncional</p>
+            </div>
+          </article>
+
+          <article class="team-card" data-animate="fade-up" data-delay="5">
+            <div class="team-card__photo">
+              <img src="assets/dra1.webp" alt="Dra. Ângela Silva Tupi Caldas" loading="lazy" />
+            </div>
+            <div class="team-card__info">
+              <h3 class="team-card__name">Dra. Ângela Silva Tupi Caldas</h3>
+              <p class="team-card__role">Fisioterapeuta Dermatofuncional</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════ DEPOIMENTOS ══════════════════════════ -->
+    <section id="depoimentos" class="section testimonials" aria-labelledby="test-title">
+      <div class="container">
+
+        <header class="section-header" data-animate="fade-up">
+          <span class="eyebrow">Depoimentos</span>
+          <h2 class="section-title" id="test-title">A confiança de quem já passou pela Neoderme</h2>
+          <p class="section-lead">Cuidar da pele é uma decisão importante — e a confiança dos nossos pacientes é o que sustenta o trabalho da Neoderme.</p>
+        </header>
+
+        <div class="test__carousel" data-animate="fade-up">
+          <div class="test__viewport">
+            <div class="test__track">
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">Fui acolhida com muito cuidado desde a primeira consulta. O atendimento transmite segurança e atenção aos detalhes.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Mariana Costa</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">Gostei muito da forma como tudo foi explicado. Senti confiança no diagnóstico e no plano de tratamento.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Fernanda Alves</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">Ambiente agradável, equipe atenciosa e resultado muito natural. Uma experiência excelente.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Patrícia Lima</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">Desde o primeiro contato percebi o cuidado da equipe. O atendimento foi organizado, gentil e muito profissional.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Juliana Martins</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">A consulta foi extremamente esclarecedora. Saí tranquila, com confiança no tratamento e no acompanhamento proposto.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Camila Rocha</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">Fiquei muito satisfeita com a atenção aos detalhes e com a forma cuidadosa como cada etapa foi conduzida.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Renata Moraes</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">A estrutura da clínica é impecável e o atendimento transmite muita segurança. Me senti acolhida o tempo todo.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Aline Barros</span>
+                </footer>
+              </article>
+
+              <article class="test-card">
+                <div class="test-card__mark" aria-hidden="true">"</div>
+                <blockquote class="test-card__text">Profissionais muito atenciosas e um atendimento humano do começo ao fim. Voltaria e indicaria com tranquilidade.</blockquote>
+                <footer class="test-card__footer">
+                  <span class="test-card__name">Carolina Duarte</span>
+                </footer>
+              </article>
+            </div>
+          </div>
+          <div class="test__dots" aria-label="Paginação dos depoimentos"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════ CTA ═══════════════════════════════ -->
+    <section id="contato" class="section cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta__grid">
+
+          <div class="cta__left" data-animate="fade-right">
+            <span class="eyebrow eyebrow--light">Agendamento</span>
+            <h2 class="cta__title" id="cta-title">Agende sua consulta</h2>
+            <p class="cta__lead">Nossa equipe está preparada para orientar você e indicar os tratamentos mais adequados para sua pele.</p>
+            <a href="https://wa.me/5541992684777" class="btn btn--cta-wa" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Agendar pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="cta__right" data-animate="fade-left">
+            <div class="contact-card">
+              <div class="contact-item">
+                <div class="contact-item__ico" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
+                </div>
+                <div>
+                  <p class="contact-item__label">WhatsApp / Telefone</p>
+                  <a href="https://wa.me/5541992684777" class="contact-item__val">(41) 99268-4777</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__ico" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="contact-item__label">Endereço</p>
+                  <!--
+                    SUBSTITUIR: Inserir endereço real da clínica aqui.
+                    Exemplo: Rua XV de Novembro, 1234, Curitiba – PR
+                  -->
+                  <p class="contact-item__val">Curitiba, Paraná</p>
+                </div>
+              </div>
+              <!--
+                SUBSTITUIR: Inserir o embed real do Google Maps aqui.
+                Exemplo:
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=..."
+                  width="100%" height="180" style="border:0" allowfullscreen loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Localização da Clínica Neoderme">
+                </iframe>
+              -->
+              <iframe
+                src="https://www.google.com/maps?q=Neoderme&ll=-25.447128,-49.289977&z=17&output=embed"
+                width="100%"
+                height="180"
+                style="border:0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização da Clínica Neoderme">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════ RODAPÉ ════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__grid">
+
+          <div class="footer__brand">
+            <a href="#inicio" class="footer__logo-link" aria-label="Neoderme – Início">
+              <img src="assets/logo.png" alt="Neoderme" width="130" height="55" class="footer__logo" />
+            </a>
+            <p class="footer__desc">Dermatologia clínica, cirúrgica e estética com excelência técnica, ética médica e cuidado individualizado.</p>
+            <div class="footer__social" aria-label="Redes sociais">
+              <a href="https://www.instagram.com/neoderme/" class="footer__social-link" aria-label="Instagram da Neoderme" target="_blank" rel="noopener noreferrer">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://www.facebook.com/neoderme/" class="footer__social-link" aria-label="Facebook da Neoderme" target="_blank" rel="noopener noreferrer">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Menu</h4>
+            <ul class="footer__links">
+              <li><a href="#tratamentos">Tratamentos</a></li>
+              <li><a href="#equipe">Equipe</a></li>
+              <li><a href="#">Blog / Conteúdo</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h4 class="footer__col-title">Contato</h4>
+            <ul class="footer__links footer__links--contact">
+              <!-- SUBSTITUIR: Endereço real -->
+              <li>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Curitiba, Paraná
+              </li>
+              <li>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14v2.92z"/></svg>
+                <a href="tel:+5541992684777">(41) 99268-4777</a>
+              </li>
+              <li>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <a href="https://wa.me/5541992684777" target="_blank" rel="noopener noreferrer">(41) 99268-4777</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copy">© Neoderme. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
