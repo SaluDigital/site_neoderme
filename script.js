@@ -278,6 +278,82 @@
     updateDiffParallax();
   }
 
+  var photoCarousel = document.querySelector('.photo-carousel');
+  var photoTrack = document.querySelector('.photo-carousel__track');
+  var photoPrev = document.querySelector('.photo-carousel__arrow--prev');
+  var photoNext = document.querySelector('.photo-carousel__arrow--next');
+
+  if (photoCarousel && photoTrack && photoPrev && photoNext) {
+    var photoSlides = Array.prototype.slice.call(photoTrack.querySelectorAll('.photo-carousel__slide'));
+    var photoIndex = 0;
+    var photoTimer = null;
+    var PHOTO_DELAY = 3600;
+
+    function loopPhotoIndex (index) {
+      return (index + photoSlides.length) % photoSlides.length;
+    }
+
+    function renderPhotoCarousel () {
+      if (!photoSlides.length) return;
+
+      var visibleIndexes = [
+        loopPhotoIndex(photoIndex - 1),
+        loopPhotoIndex(photoIndex),
+        loopPhotoIndex(photoIndex + 1)
+      ];
+
+      photoSlides.forEach(function (slide) {
+        slide.classList.remove('is-visible', 'is-active');
+        slide.setAttribute('aria-hidden', 'true');
+      });
+
+      visibleIndexes.forEach(function (slideIndex, position) {
+        var slide = photoSlides[slideIndex];
+        photoTrack.appendChild(slide);
+        slide.classList.add('is-visible');
+        slide.setAttribute('aria-hidden', 'false');
+
+        if (position === 1) {
+          slide.classList.add('is-active');
+        }
+      });
+    }
+
+    function goToPhoto (offset) {
+      photoIndex = loopPhotoIndex(photoIndex + offset);
+      renderPhotoCarousel();
+    }
+
+    function startPhotoAutoplay () {
+      stopPhotoAutoplay();
+      photoTimer = setInterval(function () {
+        goToPhoto(1);
+      }, PHOTO_DELAY);
+    }
+
+    function stopPhotoAutoplay () {
+      if (photoTimer) clearInterval(photoTimer);
+    }
+
+    photoPrev.addEventListener('click', function () {
+      goToPhoto(-1);
+      startPhotoAutoplay();
+    });
+
+    photoNext.addEventListener('click', function () {
+      goToPhoto(1);
+      startPhotoAutoplay();
+    });
+
+    photoCarousel.addEventListener('mouseenter', stopPhotoAutoplay);
+    photoCarousel.addEventListener('mouseleave', startPhotoAutoplay);
+    photoCarousel.addEventListener('focusin', stopPhotoAutoplay);
+    photoCarousel.addEventListener('focusout', startPhotoAutoplay);
+
+    renderPhotoCarousel();
+    startPhotoAutoplay();
+  }
+
   var testCarousel = document.querySelector('.test__carousel');
   var testTrack = document.querySelector('.test__track');
   var testViewport = document.querySelector('.test__viewport');
