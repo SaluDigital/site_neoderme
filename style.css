@@ -1473,27 +1473,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Galeria assimétrica */
 .gallery {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 14px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 220px;
   gap: 14px;
 }
 
 .gallery__main {
-  grid-column: 1;
-  grid-row: 1 / 4;
+  grid-column: span 2;
+  grid-row: span 2;
   position: relative;
   border-radius: var(--r-md);
   overflow: hidden;
 }
 
 .gallery__sm {
-  grid-column: 2;
   position: relative;
   border-radius: var(--r-md);
   overflow: hidden;
@@ -1548,114 +1541,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ─── 14. EQUIPE ─────────────────────────────────────────────────────────────── */
-.photo-carousel {
-  position: relative;
-  margin-top: 42px;
-  padding: 14px 58px;
-}
-
-.photo-carousel__viewport {
-  overflow: hidden;
-  padding: 24px 0;
-}
-
-.photo-carousel__track {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: center;
-}
-
-.photo-carousel__slide {
-  position: relative;
-  display: none;
-  height: 280px;
-  margin: 0;
-  border-radius: var(--r-md);
-  overflow: hidden;
-  background: var(--sand);
-  opacity: 0.72;
-  transform: scale(0.9);
-  box-shadow: 0 18px 38px rgba(30,46,44,0.12);
-  transition:
-    transform 0.45s var(--ease),
-    opacity 0.45s var(--ease),
-    box-shadow 0.45s var(--ease);
-}
-
-.photo-carousel__slide.is-visible {
-  display: block;
-}
-
-.photo-carousel__slide.is-active {
-  opacity: 1;
-  transform: scale(1.08);
-  z-index: 2;
-  box-shadow: 0 24px 48px rgba(30,46,44,0.2);
-}
-
-.photo-carousel__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.photo-carousel__slide figcaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 22px 16px 12px;
-  background: linear-gradient(to top, rgba(30,46,44,0.68), transparent);
-  color: rgba(255,255,255,0.95);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.photo-carousel__arrow {
-  position: absolute;
-  top: 50%;
-  z-index: 4;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(87,126,123,0.36);
-  border-radius: 50%;
-  background: rgba(255,255,255,0.92);
-  color: var(--teal);
-  font-size: 2rem;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transform: translateY(-50%);
-  box-shadow: 0 12px 28px rgba(30,46,44,0.12);
-  transition:
-    background 0.25s var(--ease),
-    color 0.25s var(--ease),
-    transform 0.25s var(--ease);
-}
-
-.photo-carousel__arrow:hover,
-.photo-carousel__arrow:focus-visible {
-  background: var(--teal);
-  color: var(--white);
-  transform: translateY(-50%) scale(1.06);
-}
-
-.photo-carousel__arrow--prev {
-  left: 0;
-}
-
-.photo-carousel__arrow--next {
-  right: 0;
-}
-
 .team { background: var(--sand); }
 
 .team__grid {
@@ -2173,37 +2058,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .diff__grid { grid-template-columns: 1fr; }
 
   .gallery {
-    grid-template-columns: 1fr;
-    grid-template-rows: 260px repeat(3, 180px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 190px;
   }
   .gallery__main {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .gallery__sm { grid-column: 1; }
-
-  .photo-carousel {
-    margin-top: 34px;
-    padding-inline: 42px;
-  }
-  .photo-carousel__track {
-    gap: 10px;
-  }
-  .photo-carousel__slide {
-    height: 210px;
-  }
-  .photo-carousel__slide.is-active {
-    transform: scale(1.04);
-  }
-  .photo-carousel__slide figcaption {
-    padding: 20px 10px 10px;
-    font-size: 0.62rem;
-    letter-spacing: 0.05em;
-  }
-  .photo-carousel__arrow {
-    width: 34px;
-    height: 34px;
-    font-size: 1.65rem;
+    grid-column: span 2;
+    grid-row: span 2;
   }
 
   .team__grid { grid-template-columns: repeat(2, 1fr); }
@@ -2269,28 +2129,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     max-width: 100%;
   }
 
-  .photo-carousel {
-    padding-inline: 30px;
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 180px;
   }
-  .photo-carousel__viewport {
-    padding-block: 14px;
-  }
-  .photo-carousel__track {
-    gap: 6px;
-  }
-  .photo-carousel__slide {
-    height: 150px;
-    border-radius: 6px;
-  }
-  .photo-carousel__slide figcaption {
-    padding: 18px 7px 7px;
-    font-size: 0.52rem;
-    letter-spacing: 0.03em;
-  }
-  .photo-carousel__arrow {
-    width: 28px;
-    height: 28px;
-    font-size: 1.35rem;
+  .gallery__main {
+    grid-column: 1;
+    grid-row: span 2;
   }
 }
 
