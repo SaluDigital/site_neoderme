@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neoderme.com.br/sitemap.xml
