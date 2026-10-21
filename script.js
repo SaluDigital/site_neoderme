@@ -18,8 +18,16 @@
     }
   }
 
-  window.addEventListener('scroll', updateHeader, { passive: true });
-  updateHeader();
+  var headerTicking = false;
+  window.addEventListener('scroll', function () {
+    if (headerTicking) return;
+    headerTicking = true;
+    requestAnimationFrame(function () {
+      headerTicking = false;
+      updateHeader();
+    });
+  }, { passive: true });
+  requestAnimationFrame(updateHeader);
 
   /* ─── MOBILE MENU ────────────────────────────────────────────────────────── */
   function openMenu () {
@@ -138,7 +146,10 @@
     }
   }, { passive: true });
 
-  startAutoplay();
+  // Autoplay só começa depois do carregamento, para o primeiro slide ser o LCP estável
+  window.addEventListener('load', function () {
+    setTimeout(startAutoplay, SLIDE_DELAY);
+  });
 
   /* ─── PARALLAX SUAVE (hero bg) ──────────────────────────────────────────── */
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -466,12 +466,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.85s var(--ease);
+  visibility: hidden;
+  transition: opacity 0.85s var(--ease), visibility 0s linear 0.85s;
   pointer-events: none;
 }
 
 .hero__slide.is-active {
   opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
   pointer-events: auto;
   z-index: 2;
 }
