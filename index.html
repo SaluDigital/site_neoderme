@@ -9,12 +9,28 @@
     gtag('js', new Date());
     gtag('config', 'G-WJ8PZXH7GD');
     window.addEventListener('load', function () {
-      setTimeout(function () {
+      var root = document.documentElement;
+      root.classList.add('hero-ready');
+
+      var f = document.createElement('link');
+      f.rel = 'stylesheet';
+      f.href = 'fonts-late.css?v=1';
+      document.head.appendChild(f);
+
+      // Analytics: na primeira interação ou, no máximo, 7 s após o load
+      var gaLoaded = false;
+      var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+      function loadGA () {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        events.forEach(function (e) { window.removeEventListener(e, loadGA); });
         var g = document.createElement('script');
         g.async = true;
         g.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ8PZXH7GD';
         document.head.appendChild(g);
-      }, 1500);
+      }
+      events.forEach(function (e) { window.addEventListener(e, loadGA, { passive: true, once: true }); });
+      setTimeout(loadGA, 7000);
     });
   </script>
   <title>Neoderme | Dermatologia Clínica, Estética e Laser em Curitiba</title>
@@ -58,7 +74,7 @@
   </script>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/plusjakartasans-normal-300.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/philosopher-normal-700.woff2" crossorigin />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
 
@@ -773,6 +789,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6" defer></script>
+  <script src="script.js?v=7" defer></script>
 </body>
 </html>
