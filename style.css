@@ -540,7 +540,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: center;
   padding: 18px 34px;
   border-radius: 999px;
-  background: #7ea2a3;
+  background: #527a77;
   color: var(--white);
   font-size: 0.92rem;
   letter-spacing: 0.08em;
@@ -548,7 +548,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero__slide--1 .btn--hero:hover {
-  background: #719899;
+  background: #486d6a;
   box-shadow: 0 10px 28px rgba(72, 96, 97, 0.28);
 }
 
@@ -685,7 +685,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: center;
   padding: 18px 34px;
   border-radius: 999px;
-  background: #7ea2a3;
+  background: #527a77;
   color: var(--white);
   font-size: 0.92rem;
   letter-spacing: 0.12em;
@@ -693,7 +693,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero__slide--3 .btn--hero:hover {
-  background: #719899;
+  background: #486d6a;
   box-shadow: 0 10px 28px rgba(72, 96, 97, 0.28);
 }
 
@@ -1902,7 +1902,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.72);
   margin-bottom: 20px;
 }
 
@@ -1956,7 +1956,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer__copy {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.7);
 }
 
 .footer__legal {

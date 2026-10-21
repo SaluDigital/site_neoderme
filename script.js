@@ -287,6 +287,8 @@
     requestAnimationFrame(updateDiffParallax);
   }
 
+  // Carrossel de depoimentos fica abaixo da dobra: inicia após o load para não forçar reflow no carregamento
+  function initTestimonials () {
   var testCarousel = document.querySelector('.test__carousel');
   var testTrack = document.querySelector('.test__track');
   var testViewport = document.querySelector('.test__viewport');
@@ -369,5 +371,11 @@
       updateTestimonials();
     });
   }
+
+  }
+
+  window.addEventListener('load', function () {
+    (window.requestIdleCallback || window.setTimeout)(initTestimonials);
+  });
 
 })();
