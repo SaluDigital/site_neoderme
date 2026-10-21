@@ -1857,7 +1857,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1.3fr 1fr;
   gap: clamp(32px, 5vw, 64px);
 }
 
@@ -1918,6 +1918,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: rgba(255,255,255,0.6);
   transition: color var(--tr-fast), padding-left var(--tr-fast);
   display: block;
+}
+
+.footer__links--cols {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  justify-content: start;
+  column-gap: clamp(28px, 4vw, 56px);
 }
 
 .footer__links a:hover { color: var(--beige); padding-left: 4px; }
@@ -2114,6 +2123,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .footer__links {
     align-items: center;
+  }
+  .footer__links--cols {
+    justify-content: center;
+    justify-items: start;
   }
   .footer__links--contact li {
     justify-content: center;
