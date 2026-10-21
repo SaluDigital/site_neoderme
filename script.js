@@ -150,10 +150,17 @@
     });
   }
 
+  var heroH = 0;
+  var parallaxTicking = false;
+
+  function measureHero () {
+    heroH = heroSection ? heroSection.offsetHeight : 0;
+  }
+
   function handleParallax () {
+    parallaxTicking = false;
     if (prefersReduced) return;
     var scrollY = window.pageYOffset;
-    var heroH   = heroSection ? heroSection.offsetHeight : 0;
     if (scrollY > heroH) return;
 
     var activeBg = slides[currentSlide] ? slides[currentSlide].querySelector('.hero__bg') : null;
@@ -162,7 +169,13 @@
     }
   }
 
-  window.addEventListener('scroll', handleParallax, { passive: true });
+  window.addEventListener('scroll', function () {
+    if (parallaxTicking) return;
+    parallaxTicking = true;
+    requestAnimationFrame(handleParallax);
+  }, { passive: true });
+  window.addEventListener('resize', measureHero);
+  requestAnimationFrame(measureHero);
 
   /* ─── SCROLL SUAVE PARA ÂNCORAS ─────────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -206,21 +219,6 @@
       el.classList.add('is-visible');
     });
   }
-
-  /* ─── HOVER MICROINTERAÇÕES – treatment cards ───────────────────────────── */
-  document.querySelectorAll('.t-card').forEach(function (card) {
-    // Acessibilidade por teclado: Enter / Space ativa link/âncora
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('role', 'button');
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        var link = card.querySelector('a');
-        if (link) link.click();
-        else window.location.href = '#contato';
-      }
-    });
-  });
 
   /* ─── GALLERY – hover zoom já feito via CSS, nada extra necessário ───────── */
 
@@ -275,7 +273,7 @@
 
     window.addEventListener('scroll', updateDiffParallax, { passive: true });
     window.addEventListener('resize', updateDiffParallax);
-    updateDiffParallax();
+    requestAnimationFrame(updateDiffParallax);
   }
 
   var testCarousel = document.querySelector('.test__carousel');
@@ -350,7 +348,7 @@
     }
 
     renderTestDots();
-    updateTestimonials();
+    requestAnimationFrame(updateTestimonials);
     startTestimonialsAutoplay();
 
     testCarousel.addEventListener('mouseenter', stopTestimonialsAutoplay);

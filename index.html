@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ8PZXH7GD"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-WJ8PZXH7GD');
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var g = document.createElement('script');
+        g.async = true;
+        g.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ8PZXH7GD';
+        document.head.appendChild(g);
+      }, 1500);
+    });
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neoderme | Dermatologia Clínica, Estética e Laser em Curitiba</title>
   <meta name="description" content="Clínica dermatológica em Curitiba: dermatologia clínica, cirúrgica e estética, laser e depilação a laser, com diagnóstico preciso e resultados naturais." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -51,9 +56,8 @@
     "sameAs": ["https://www.instagram.com/neoderme/", "https://www.facebook.com/neoderme/"]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/plusjakartasans-normal-300.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/philosopher-normal-700.woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -63,7 +67,7 @@
     <div class="header__inner">
 
       <a href="#inicio" class="header__logo" aria-label="Neoderme – Voltar ao início">
-        <img src="assets/logo.png" alt="Neoderme" width="150" height="68" fetchpriority="high" />
+        <img src="assets/logo.webp" alt="Neoderme" width="150" height="68" />
       </a>
 
       <nav class="header__nav" aria-label="Menu principal">
@@ -713,7 +717,7 @@
 
           <div class="footer__brand">
             <a href="#inicio" class="footer__logo-link" aria-label="Neoderme – Início">
-              <img src="assets/logo.png" alt="Neoderme" width="130" height="59" class="footer__logo" loading="lazy" />
+              <img src="assets/logo.webp" alt="Neoderme" width="130" height="59" class="footer__logo" loading="lazy" />
             </a>
             <p class="footer__desc">Dermatologia clínica, cirúrgica e estética com excelência técnica, ética médica e cuidado individualizado.</p>
             <div class="footer__social" aria-label="Redes sociais">
